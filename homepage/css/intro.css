@@ -1,0 +1,587 @@
+/*공통*/
+    .clearfix:after{    
+        content: "";
+        clear: both;
+        display: block;
+    }
+    .desktop{
+        display: none;
+    }
+    .mockup3D{
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        max-width: 400px;
+        height: 50%;
+        overflow: hidden;
+        
+        background-image: url(../image/phoneMockup2.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: auto;    
+        width: calc(100% - 40px);
+        padding: 20% 4.5% 0 4.5%;
+    }
+    .mockup3D img{
+        width: 100%;
+        border-radius: 5px;
+        
+        margin-bottom: -2%;
+        border: 2px solid #c3c3c3;
+        box-sizing: border-box;
+    }
+    .full.mockup3D img{
+        margin-bottom: 25%;
+        margin-top: -5%;
+    }
+    .mockup2D{
+        background-image: url(../image/phoneMockup.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin: auto;
+    }
+    .mockup2D img{
+        width: 60%;
+        margin: 40% auto;
+    }
+    article{
+        padding: 50px 0;
+    }
+    article h1{
+        font-size: 1.4em;
+        text-align: center;
+        margin-bottom: 30px;
+        line-height: 1.1em;
+    }
+    @media only screen
+    and (min-width : 375px) and (max-width : 425px){ 
+        article h1{
+            font-size: 1.6em;
+        }
+    }
+    @media only screen
+    and (min-width : 425px) and (max-width : 768px){ 
+        article h1{
+            font-size: 1.8em;
+        }
+    }
+    .title{
+        color: #008ae8;
+    }
+    /*공통 tablet*/
+    @media only screen
+    and (min-width : 768px) { 
+        article .title{
+            font-size: 2em;
+        }
+        .desktop{ display: block;}
+        .mobile{ display: none; }
+    }
+    /*공통 decktop*/
+    @media only screen
+    and (min-width : 1024px) {
+        article .title{
+        font-size: 2.2em;
+        }
+    }
+
+
+
+
+
+/*header*/
+    header{
+        margin:auto;
+        text-align: center;
+        padding: 50px 20px;
+        max-height: 100vh;
+        overflow: hidden;
+        background-color: #008ae8;
+    }
+    header .textWrap{
+
+    }
+    header h2{    
+        background-color: #fff;
+        color: #2b2b2b;
+        width: 14em;
+        height: 1em;
+        margin: auto;
+        word-break: keep-all;
+        padding: 2px 3px;
+    }
+    header h2 span{
+/*        color: #FFC107;*/
+        font-weight: bold;
+    }
+    header h1{
+        line-height: 1.2em;
+        color: #fff;
+        margin: 10px 0 15px 0;
+        font-size: 1.5em;
+    }
+    header .mockup2D{    
+        width: 60%;
+        max-width: 200px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    header .imgWrap{
+        width: 55%;
+        max-width: 300px;
+        float: right;
+    }
+    header .imgWrap img{
+        width: 80%;
+    }
+    .linkBtn{
+        overflow: hidden;
+        white-space: nowrap;
+        width: 40%;
+        max-width: 120px;
+        display: inline-block;
+    }
+    .linkBtn img{
+        width: 100%;
+    }
+
+    /*header tablet~ 반응형*/
+    @media only screen
+    and (min-width : 768px) { 
+        header .contentWrap{
+            width: 70%;
+            max-width: 600px;
+            position: relative;
+            margin: auto;
+        }
+        header .textWrap{
+            width: 51%;
+            max-width: 300px;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(0, -50% );
+        }
+        header .title{
+            width: 80%;
+            margin: auto;
+            margin-bottom: 100px;
+            max-width: 300px;
+        }
+    }
+
+
+
+
+
+
+/*기록실*/
+    .recordRoom{
+        background-color: #eee;
+    }
+    .recordRoom h2:before{
+        content: "";
+        display: block;
+        width: 3rem;
+        height: 8px;
+        background-color: #3ab776;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+    .recordRoom h2{
+        text-align: center;
+        margin: 40px 10px;
+        line-height: 1.2em;
+        height: 5em;
+    }
+    .recordRoom .mockup3D {
+        margin: auto;
+    }
+    /* 기록실 설명 이미지중 화면크기가 440px이상 일때, 목업 이미지 400px이상 커지지 않음 내부의 실사 img 위치가 %로 잡혀있기 때문에 %의 영향을 받지 않게 px값으로 고정하기*/
+     @media only screen
+        and (min-width : 440px) { 
+            .recordRoom .mockup3D{
+                padding: 88px 19.797px 0px 19.797px;
+            }
+            .recordRoom .mockup3D img{
+                width: 360.41px;
+                margin-bottom: -7.203px;
+            }
+        }
+    .recordRoom ul{
+        background-color: #fff;
+        margin: auto;
+        width: 70%;
+        padding: 20px;
+        max-width: 500px;
+        text-align: left;
+        overflow: hidden;
+    }
+    .recordRoom li{    
+        display: inline-block;
+        padding: 20px 0;
+        width: 50%;
+        font-size: 14px;
+        text-align: center;
+        float: left;
+    }
+    /*recordRoom layout ul li 3*3*/
+    @media only screen
+    and (min-width : 400px) { 
+        .recordRoom li{    
+            width: 32.5%;
+        }
+    }
+    .recordRoom li strong{    
+        background-color: #3ab776;
+        border-radius: 50%;
+        color: #fff;
+        display: block;
+        font-size: 2.5rem;
+        width: 4rem;
+        height: 4rem;
+        line-height: 4rem;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+    .recordRoom .swiper-container{
+        background-color: #fff;    
+        margin: auto;
+        width: calc(70% + 40px);
+        max-width: 540px;
+    }
+    .recordRoom .swiper-slide{
+        padding: 20px 0;
+    }
+    .recordRoom .swiper-slide strong{    
+        width: 100%;
+        display: block;
+        color: #3ab776;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ddd;
+        text-align: left;
+        text-indent: 20px;
+    }
+    .recordRoom .swiper-slide img{
+        width: calc(100% - 20px);
+        display: block;
+        margin: 10px;
+        background-color: #eee;
+/*        height: 277px;*/
+    }
+    .recordRoom .swiper-pagination-bullet-active{
+        background: #3ab776;
+    }
+    /*recordRom desktop 반응형*/
+    @media only screen
+    and (min-width : 1024px) {
+        .recordRoom .contentWrap{
+            text-align: center;
+            width: 960px;
+            margin: auto;
+        }
+        .recordRoom .content:first-child{
+            margin-right: -25px;
+        } 
+        .recordRoom .content:nth-child(2){
+            margin-left: -25px;
+        }    
+        .recordRoom .content{
+            float:left;
+            width: 505px;
+        }
+    }
+
+
+
+
+/*기록분석*/
+    .analysis{
+        background-color: #fff;
+    }
+    .analysis .mockup3D{
+        margin: 50px auto;
+    }
+    /*기록분석 tablet~ 반응형*/
+    @media only screen
+    and (min-width : 768px) { 
+        .analysis .contentWrap{
+            width: 70%;
+            max-width: 700px;
+            position: relative;
+            margin: auto;
+        }
+        .analysis .mockup3D{
+            float: left;
+            width: 55%;
+        }
+        .analysis .textWrap{
+            width: 40%;
+            max-width: 400px;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translate(0, -50% );
+            word-break: break-all;
+            word-wrap: break-word;
+            text-align: center;
+        }
+        .analysis h2{
+            color: #008ae8;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        .analysis p{
+        }
+    }
+    /* 분석 설명 화면크기가 440px 이하일 때 반응형 440px~768px일때 목업 이미지 고정값으로 들어가고 768px 이상일 때 반응형으로 제작*/
+    @media only screen
+            and (min-width : 440px) and (max-width : 767px) { 
+                .analysis .mockup3D{
+                    padding: 88px 19.797px 92px 19.797px;
+                }
+                .analysis .mockup3D img{
+                    width: 360.41px;
+                    margin-bottom: -7.203px;
+                }
+            }
+     @media only screen
+        and (min-width : 768px) { 
+            .analysis .mockup3D{
+                padding: 13% 3% 0px 3%;
+            }
+        }
+
+
+
+
+/*평가하기*/
+.review{
+    background-color: #eee;
+}
+.review .content{
+    position: relative;
+    padding: 0 20px;
+    margin-bottom: 150px;
+}
+.review .mockup3D{
+    margin: auto;
+}
+.review .textWrap{
+    width: calc(100% - 60px);
+    max-width: 380px;
+    min-height: 3rem;
+    position: absolute;
+/*    bottom: 6px;*/
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: block;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0px 6px 36px #888888;
+    word-break: break-all;
+    word-wrap: break-word;
+    text-align: center;
+}
+.review .textWrap p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 20px);
+}
+.review .textWrap:after { 
+    content: ""; 
+    display: inline-block; 
+    vertical-align: middle;
+    width: 0px;
+    height: 100%;
+}
+.review .textWrap img{
+    position: absolute;
+    display: block;
+}
+#icon_rating{
+    top:73%;
+    right: 0;
+    width: 35%;
+}
+#icon_mvp{
+    left: -6%;
+    top: -50%;
+    width: 26%;
+}
+#icon_callout{
+    top: 76%;
+    right: -4%;
+    width: 35%;
+}
+/*평가하기 desktop~ 반응형*/
+    @media only screen
+    and (min-width : 1024px) { 
+        .review .contentWrap{
+            width: 80%;
+            max-width: 810px;
+            position: relative;
+            margin: auto;
+        }
+        .review .content{
+            width: 33.33%;
+            max-width: 230px;
+            float: left;
+        }
+    }
+    /* review 설명 이미지중 화면크기가 485px이상 일때, 목업 이미지 400px이상 커지지 않음 내부의 실사 img 위치가 %로 잡혀있기 때문에 %의 영향을 받지 않게 px값으로 고정하기*/
+     @media only screen
+        and (min-width : 485px) and (max-width : 1023px){ 
+            .review .mockup3D{
+                padding: 88px 19.797px 0px 19.797px;
+            }
+            .review .mockup3D img{
+                width: 360.41px;
+                margin-bottom: -7.203px;
+            }
+        }
+/* matching*/
+.matching{
+    background-color: #f4f4f4;
+    height: 150vw;
+    overflow: hidden;
+    padding-bottom: 150px;
+}
+.matching .contentWrap{
+    margin: auto;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 18%;
+}
+.matching .title{
+    text-align: left;
+    margin-left: 10px;
+    margin-bottom: 10%;
+    line-height: 1.5em;
+}
+.matching .imgWrap{
+    position: relative;
+    height: 100vw;
+    transform: rotate(-15deg);
+    max-width: 580px;
+}
+.matching img{
+    position: absolute;
+    width: 60%;
+    box-shadow: -5px 12px 12px #888888;
+}
+.matching img:nth-child(1){
+    left: calc(60% - 20px + 8px);
+    top: 0;
+}
+.matching img:nth-child(2){
+    top: 20%;
+    left: -20px;
+}
+/*왼쪽하단의 이미지 top기본은 %로 작업되어있음, 화면이 커졌을 때 많이 내려가 보이는 것을 잡아줌*/
+@media only screen
+    and (min-width : 450px){ 
+        .matching img:nth-child(2){
+            top: 100px;
+        }
+    }
+
+/*화면크기 500px에서 contentWrap 넓이 500px이고 내부 img크기는 전체 길이의 %인것을 px로 고정해줌*/
+@media only screen
+    and (min-width : 500px) { 
+        .matching img{
+            width: 300px;
+        }
+        .matching{
+            height: 780px;
+        }
+    }
+
+/*이미지 최고 사이즈 이상으로 커졌을 때 이미지가 자동으로 오른쪽 하단에 붙도록 설정*/
+@media only screen
+    and (min-width : 650px) { 
+        .matching .imgWrap{
+            right: calc(-50vw + 300px);
+            top: -30px;
+        }
+    }
+
+/*화면 전체의 길이가 길어져서 오른쪽 하단에 붙는것이 어색해질때 px값으로 위치를 고정*/
+@media only screen
+    and (min-width : 1000px) { 
+        .matching .imgWrap{
+            right: -160px;
+            top: -50px;
+        }
+    }
+/*kakaoTalk*/
+.kakaoTalk{
+    background-color: #caedef;
+    padding: 0;
+    padding-top: 30px;
+}
+.kakaoTalk .title{
+    line-height: 1.2em;
+}
+.kakaoTalk .mockup2D{
+    width: 50%;
+    max-width: 300px;
+    position: relative;
+    text-align: center;
+}
+.kakaoTalk .invite{
+    width: 120%;
+    margin: 0;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.kakaoTalk .callout{
+    position: absolute;
+    top: -5%;
+    margin: 0;
+    width: 30%;
+    max-width: 90px;
+    right: -15%;
+}
+@media only screen
+    and (min-width : 768px) { 
+        .kakaoTalk .contentWrap{
+            width: 70%;
+            max-width: 700px;
+            position: relative;
+            margin: auto;
+        }
+    }
+
+
+
+/*footer*/
+footer{
+    background-color: #fff;
+    padding: 20px 10px 10px 10px;
+    color: #3b3b3b;
+}
+footer .logo{
+    margin-bottom: 30px;
+    width: 40%;
+    max-width: 120px;
+    margin-left: 10px;
+}
+footer p{
+    font-weight: bold;
+    padding: 10px;
+    word-break: keep-all;
+}
+@media only screen
+    and (min-width : 768px) { 
+        footer .contentWrap{
+            width: 70%;
+            max-width: 700px;
+            position: relative;
+            margin: auto;
+        }
+    }
